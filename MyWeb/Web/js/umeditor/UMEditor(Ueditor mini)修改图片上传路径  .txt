@@ -1,0 +1,8 @@
+imageUp.ashx
+string pathbase = "/UpLoad/images/";  //保存文件夹在网站根目录下
+dialogs/image/image.js
+//修改为
+var $img = $("<img src='" + url + "' class='edui-image-pic' />"),//去掉editor.options.imagePath，要不然上传后图片列表图片路径错误
+umeditor.js
+//8038行//修改为
+picLink = link;//去掉me.options.imagePath，拖拽图片进编辑框，路径错误

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            var audio = document.getElementById("audio");
+            var context = canvas.getContext("2d");
+            createPan(context);
+            createMark(context);
+            createZhen(context);
+            audio.ontimeupdate = function () {
+                if (audio.currentTime >= 0.1) {
+                    audio.pause();
+                }
+            };
+            setInterval(function () {
+                context.clearRect(0, 0, 400, 400);
+                audio.currentTime = 0;
+                audio.play();
+                createPan(context);
+                createMark(context);
+                createZhen(context);
+            }, 1000);
+        };
+
+        //画表盘
+        function createPan(context) {
+            context.beginPath();
+            //表盘背景
+            var colorBg = context.createRadialGradient(200, 200, 0, 200, 200, 100);
+            colorBg.addColorStop(0, "#eeeeee");
+            colorBg.addColorStop(1, "#aaaaaa");
+            context.fillStyle = colorBg;
+            //表盘边框
+            context.lineWidth = 2;
+            context.strokeStyle = colorBg;
+            context.shadowColor = "#eaeaea";
+            context.shadowOffsetX = 1;
+            context.shadowOffsetY = 1;
+            context.shadowBlur = 2;
+            context.arc(200, 200, 100, 0, Math.PI * 2);
+            context.stroke();
+            context.fill();
+        }
+        //画刻度
+        function createMark(context) {
+            context.shadowOffsetX = 0;
+            context.shadowOffsetY = 0;
+            context.shadowBlur = 0;
+            for (var i = 0; i < 60; i++) {
+                var angle = i * 6 * Math.PI / 180;
+                var lineLen = 7;
+                var lineW = 2;
+                if (i % 5 == 0) {
+                    lineLen = 10;
+                    lineW = 4;
+                }
+                context.lineWidth = lineW;
+                context.strokeStyle = "#666";
+                context.beginPath();
+                var x = 200 + 100 * Math.cos(angle);
+                var y = 200 + 100 * Math.sin(angle);
+                var endx = 200 + (100 - lineLen) * Math.cos(angle);
+                var endy = 200 + (100 - lineLen) * Math.sin(angle);
+                context.moveTo(x, y);
+                context.lineTo(endx, endy);
+                context.stroke();
+            }
+        }
+
+        //画表针
+        function createZhen(context) {
+            var d = new Date();
+            var h = (d.getHours() * 30 - 90 + 30 / 60 * d.getMinutes()) * Math.PI / 180;
+            var m = (d.getMinutes() * 6 - 90) * Math.PI / 180;
+            var s = (d.getSeconds() * 6 - 90) * Math.PI / 180;
+            var hLen = 70;
+            var mLen = 80;
+            var sLen = 90;
+            context.strokeStyle = "#222";
+            context.lineWidth = 2;
+            createLine(context, hLen, h, "#f00");
+            createLine(context, mLen, m, "#0f0");
+            createLine(context, sLen, s, "#00f");
+        }
+        function createLine(context, len, arc, color) {
+            context.strokeStyle = color;
+            context.beginPath();
+            var x = 200 + len * Math.cos(arc);
+            var y = 200 + len * Math.sin(arc);
+            context.moveTo(200, 200);
+            context.lineTo(x, y);
+            context.stroke();
+        }
+    </script>
+    <style type="text/css">
+        #canvas {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <!--<audio src="1.wav" id="audio"></audio>-->
+</body>
+</html>

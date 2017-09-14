@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YYZZModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a_Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="a_TypeId" Type="int" Nullable="false" />
+    <Property Name="a_KeyWord" Type="nvarchar" MaxLength="100" />
+    <Property Name="a_From" Type="nvarchar" MaxLength="50" />
+    <Property Name="a_Content" Type="text" Nullable="false" />
+    <Property Name="a_IsTop" Type="bit" />
+    <Property Name="a_IsHot" Type="bit" />
+    <Property Name="a_States" Type="tinyint" />
+    <Property Name="a_CreateBy" Type="bigint" Nullable="false" />
+    <Property Name="a_CreateDate" Type="datetime" />
+    <Property Name="a_ModifiedBy" Type="bigint" />
+    <Property Name="a_ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="a_Statistics" Type="int" />
+    <Property Name="a_LikeCount" Type="int" />
+  </EntityType>
+  <EntityType Name="ArticleType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a_t_ArticleCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="a_t_Flag" Type="tinyint" Nullable="false" />
+    <Property Name="a_t_CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="a_t_CreateDate" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“YYZZ.dbo.Collection”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Collection">
+    <Key>
+      <PropertyRef Name="C_id" />
+      <PropertyRef Name="U_id" />
+      <PropertyRef Name="A_id" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="Flg" />
+    </Key>
+    <Property Name="C_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_id" Type="int" Nullable="false" />
+    <Property Name="A_id" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="Flg" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titleID" Type="bigint" Nullable="false" />
+    <Property Name="content" Type="nvarchar" MaxLength="500" />
+    <Property Name="userId" Type="bigint" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+    <Property Name="createtime" Type="datetime" />
+    <Property Name="state" Type="int" />
+    <Property Name="hasson" Type="bit" />
+    <Property Name="isson" Type="bit" />
+    <Property Name="parentid" Type="bigint" />
+    <Property Name="cool" Type="int" />
+    <Property Name="browserInfo" Type="nvarchar" MaxLength="100" />
+    <Property Name="ipaddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="isp" Type="nvarchar" MaxLength="50" />
+    <Property Name="os" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LikeCount">
+    <Key>
+      <PropertyRef Name="l_id" />
+    </Key>
+    <Property Name="l_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a_id" Type="bigint" Nullable="false" />
+    <Property Name="u_id" Type="bigint" Nullable="false" />
+    <Property Name="liketime" Type="datetime" />
+    <Property Name="stats" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_Id" Type="bigint" Nullable="false" />
+    <Property Name="UD_Sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="UD_Age" Type="nvarchar" MaxLength="8" />
+    <Property Name="UD_Birth" Type="date" />
+    <Property Name="UD_Cale" Type="nvarchar" MaxLength="10" />
+    <Property Name="UD_Const" Type="nvarchar" MaxLength="20" />
+    <Property Name="UD_BooldType" Type="nvarchar" MaxLength="10" />
+    <Property Name="UD_EmotState" Type="nvarchar" MaxLength="20" />
+    <Property Name="UD_ContactWay" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_School" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_PaperType" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_PaperNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_Worker" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_HomeTown" Type="nvarchar" MaxLength="50" />
+    <Property Name="UD_NowPlace" Type="nvarchar" MaxLength="150" />
+    <Property Name="UD_Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="UD_Remark" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="U_Id" />
+    </Key>
+    <Property Name="U_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="U_UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="U_Salt" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="U_RealName" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_NickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_Email" Type="varchar" MaxLength="50" />
+    <Property Name="U_MobilePhone" Type="varchar" MaxLength="16" />
+    <Property Name="U_State" Type="tinyint" Nullable="false" />
+    <Property Name="U_Access" Type="tinyint" Nullable="false" />
+    <Property Name="U_HeadPic" Type="varchar" MaxLength="100" />
+    <Property Name="U_RegisterDate" Type="datetime" />
+    <Property Name="U_LastLoginTime" Type="datetime" />
+    <Property Name="U_Tag" Type="nvarchar(max)" />
+    <Property Name="U_Signature" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_Articles_ArticleTypes">
+    <End Role="ArticleType" Type="Self.ArticleType" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArticleType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="a_TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articles_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="U_Id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="a_CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LikeCount_Articles">
+    <End Role="Article" Type="Self.Article" Multiplicity="1" />
+    <End Role="LikeCount" Type="Self.LikeCount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LikeCount">
+        <PropertyRef Name="a_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LikeCount_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="LikeCount" Type="Self.LikeCount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="U_Id" />
+      </Principal>
+      <Dependent Role="LikeCount">
+        <PropertyRef Name="u_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserDetail_UserDetail">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="UserDetail" Type="Self.UserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="U_Id" />
+      </Principal>
+      <Dependent Role="UserDetail">
+        <PropertyRef Name="U_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YYZZModelStoreContainer">
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleType" EntityType="Self.ArticleType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LikeCount" EntityType="Self.LikeCount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDetail" EntityType="Self.UserDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Collection" EntityType="Self.Collection" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Collection].[C_id] AS [C_id], 
+    [Collection].[U_id] AS [U_id], 
+    [Collection].[A_id] AS [A_id], 
+    [Collection].[CreateDate] AS [CreateDate], 
+    [Collection].[Flg] AS [Flg]
+    FROM [dbo].[Collection] AS [Collection]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Articles_ArticleTypes" Association="Self.FK_Articles_ArticleTypes">
+      <End Role="ArticleType" EntitySet="ArticleType" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articles_UserInfo" Association="Self.FK_Articles_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LikeCount_Articles" Association="Self.FK_LikeCount_Articles">
+      <End Role="Article" EntitySet="Article" />
+      <End Role="LikeCount" EntitySet="LikeCount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LikeCount_UserInfo" Association="Self.FK_LikeCount_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="LikeCount" EntitySet="LikeCount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserDetail_UserDetail" Association="Self.FK_UserDetail_UserDetail">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="UserDetail" EntitySet="UserDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

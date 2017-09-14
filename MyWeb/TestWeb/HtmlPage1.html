@@ -1,0 +1,43 @@
+﻿<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>html5 canvas 2D网状布帘撕烂交互效果代码</title> 
+</head>
+
+<body>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            background: #F2F2F2;
+        }
+
+        #c {
+            display: block;
+            margin: 20px auto 0;
+        }
+    </style>
+    <div id="div1">
+        <span id="value"></span>
+    </div>
+    <canvas id="c"></canvas>
+
+    <script src="js/HtmlPage1.js"></script>
+    <script type="text/javascript">
+
+        $('#value').html(localStorage.sendvalue);
+    </script>
+
+
+</body>
+</html>

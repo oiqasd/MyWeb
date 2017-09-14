@@ -1,0 +1,332 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MsPage.master.cs" Inherits="YZ.Web.Asp.MsPage" %>
+
+<!DOCTYPE html>
+<%--<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+--%>
+
+<!--
+ ______________ 
+< x.x >
+ -------------- 
+        \   ^__^
+         \  (**)\__$__$__
+            (__)\       )\/\
+             U  ||------|
+                ||     ||
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--<![endif]-->
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="养身,中医,美食" />
+    <meta http-equiv="windows-Target" content="_top" />
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <!-- Style Sheet-->
+    <link rel='stylesheet' href='/css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
+    <link rel='stylesheet' href='/css/responsive5152.css?ver=1.0' type='text/css' media='all' />
+    <%--<link rel='stylesheet' href='css/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />--%>
+    <link rel='stylesheet' href='/css/main5152.css?ver=1.0' type='text/css' media='all' />
+    <link rel='stylesheet' href='/css/custom5152.html?ver=1.1' type='text/css' media='all' />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/winlogin.css" rel="stylesheet" />
+    <!-- Js-->
+    <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+    <!--导航固定-->
+    <%-- <script src="/js/navfix.js"></script>--%>
+    <!--导航栏下滑-->
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <!--回到顶部-->
+    <script src="/js/auto.js" type="text/javascript"></script>
+    <title>MyWeb</title>
+    <style type="text/css">
+        /*html, body {
+            width: 100%;
+            height: 100%;
+        }*/
+
+        <!-- 以下设置全屏body {
+            /*margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;*/
+        }
+        -->
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            // $('#mynav').navfix(0, 999);
+            //第一个值： 你期望导航在距离顶部多少的位置浮动<br/>  
+            //第二个值： 导航zindex<br/> 
+
+            //var bodyHeight = document.body.clientHeight;
+            //var screenHeight = window.screen.height;
+            //alert(screenHeight + "   " + bodyHeight)
+            //if (screenHeight > bodyHeight) {
+            //document.getElementById("divContent").style.minHeight = (bodyHeight - 122) + "px";
+            //}
+        });
+    </script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+                <script src="js/html5.js"></script>
+                <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body">
+
+    <%--登录窗开始--%>
+    <%--<div class="theme-buy">
+        <a class="btn btn-primary btn-large theme-login" href="javascript:;">点击查看效果</a>
+    </div>--%>
+    <div class="theme-popover">
+        <div class="theme-poptit">
+            <a href="javascript:;" title="关闭" class="close">×</a>
+            <h3>登录 是一种支持</h3>
+        </div>
+        <div class="theme-popbod dform">
+            <form class="theme-signin" name="loginform" action="" onsubmit="return asynclogin();" method="post">
+                <ol>
+                    <li><strong>用户名：</strong><input class="ipt" type="text" placeholder="用户名" required="" name="username" id="lusername" size="20" /></li>
+                    <li><strong>密　码：</strong><input class="ipt" type="password" placeholder="密码" required="" name="password" id="lpassword" size="20" />
+                        <span id="spanLoginErr" style="color: red;"></span>
+                    </li>
+                    <li>
+                        <input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
+                </ol>
+            </form>
+        </div>
+    </div>
+    <div class="theme-popover-mask"></div>
+    <%--登录窗结束--%>
+
+    <%-- <form id="form1" runat="server">--%>
+    <div id="mynav">
+        <!-- Start of Header -->
+        <!--style="position:fixed; bottom:91%;"-->
+        <div class="header-wrapper" style="position: fixed; z-index: 9999; left: 0; top: 0; box-shadow: 0 1px 0 rgba(0, 0, 0,.2)">
+            <header>
+                <div class="container">
+                    <div class="logo-container">
+                        <!-- Website Logo -->
+                        <a href="/index.aspx" title="Knowledge Base Theme">
+                            <img src="/Images/logo.png" alt="Knowledge Base Theme" />
+                        </a>
+                        <span class="tag-line">Premium WordPress Theme</span>
+                    </div>
+
+
+                    <!-- Start of Main Navigation -->
+                    <nav class="main-nav">
+                        <div class="menu-top-menu-container">
+                            <ul id="menu-top-menu" class="clearfix">
+                                <li id="ms-ind"><a href="/index.aspx">首页</a></li>
+                                <li id="ms-diet"><a href="/chihuo.aspx">吃货</a></li>
+                                <li id="ms-exe"><a href="/yundong.aspx">潜能篇</a></li>
+                                <li id="ms-mass"><a href="/massage.aspx">技能篇</a></li>
+                                <li id="ms-drug"><a href="/drug.aspx">神农篇</a></li>
+                                <li id="ms-sea"><a href="/seasons.aspx">天火篇</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/season/spring.aspx">春</a></li>
+                                        <li><a href="/season/summer.aspx">夏</a></li>
+                                        <li><a href="/season/autumn.aspx">秋</a></li>
+                                        <li><a href="/season/winter.aspx">冬</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">More</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="doctor.aspx">1z</a></li>
+                                        <li><a href="#">Elements</a></li>
+                                        <li><a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)" style="margin: 0;">加入收藏</a></li>
+                                    </ul>
+                                </li>
+                                <li id="ms-about"><a href="about.aspx">About</a></li>
+                                <li>
+                                    <div id="divusr" runat="server"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- End of Main Navigation -->
+
+                </div>
+            </header>
+        </div>
+        <!-- End of Header -->
+        <div id="divContent" style="margin-top: 60px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Start of Footer  style="height: 0px; position: relative; bottom: 9%;"-->
+        <footer id="footer-wrapper" style="height: 0px;">
+            <!-- <div id="footer" class="container">                   
+                    <div class="row">
+                        <div class="span3">
+                            <section class="widget">
+                                <h3 class="title">How it works</h3>
+                                <div class="textwidget">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="span3">
+                            <section class="widget">
+                                <h3 class="title">Categories</h3>
+                                <ul>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet,">Advanced Techniques</a> </li>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet,">Designing in WordPress</a></li>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet,">Server &amp; Database</a></li>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet, ">Theme Development</a></li>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet,">Website Dev</a></li>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet,">WordPress for Beginners</a></li>
+                                    <li><a href="#" title="Lorem ipsum dolor sit amet, ">WordPress Plugins</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="span3">
+                            <section class="widget">
+                                <h3 class="title">Latest Tweets</h3>
+                                <div id="twitter_update_list">
+                                    <ul>
+                                        <li>No Tweets loaded !</li>
+                                    </ul>
+                                </div>
+                                </section>
+                        </div>
+                        <div class="span3">
+                            <section class="widget">
+                                <h3 class="title">Flickr Photos</h3>
+                                <div class="flickr-photos" id="basicuse">
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- end of #footer -->
+
+            <!-- Footer Bottom -->
+            <div id="footer-bottom-wrapper">
+                <div id="footer-bottom" class="container">
+                    <div class="row">
+                        <div class="span6">
+                            <p class="copyright">
+                                &nbsp;  <%-- Copyright © 2015. All Rights Reserved by qasd--%>
+                            </p>
+                        </div>
+                        <!-- Social Navigation -->
+                        <!-- <div class="span6">
+                                
+                                <ul class="social-nav clearfix">
+                                    <li class="linkedin"><a target="_blank" href="#"></a></li>
+                                    <li class="stumble"><a target="_blank" href="#"></a></li>
+                                    <li class="google"><a target="_blank" href="#"></a></li>
+                                    <li class="deviantart"><a target="_blank" href="#"></a></li>
+                                    <li class="flickr"><a target="_blank" href="#"></a></li>
+                                    <li class="skype"><a target="_blank" href="skype:#?call"></a></li>
+                                    <li class="rss"><a target="_blank" href="#"></a></li>
+                                    <li class="twitter"><a target="_blank" href="#"></a></li>
+                                    <li class="facebook"><a target="_blank" href="#"></a></li>
+                                </ul>
+                            </div>
+                                -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of Footer Bottom -->
+
+        </footer>
+        <!-- End of Footer -->
+
+        <a href="#top" id="scroll-top"></a>
+    </div>
+    <%--  </form>--%>
+
+    <script src="/js/jflickrfeed.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/msgbox/jquery.similar.msgbox.js"></script>
+    <script src="/js/LoginJs.js"></script>
+
+    <script>
+        //导航固定
+
+        //var mt = 0;
+        //window.onload = function () {
+        //    var mydiv = document.getElementById("mynav");
+        //    var mt = mydiv.offsetTop;
+        //    window.onscroll = function () {
+        //        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        //        if (t > mt) {
+        //            mydiv.style.position = "fixed";
+        //            mydiv.style.margin = "0";
+        //            mydiv.style.top = "0";
+        //        }
+        //        else {
+        //            mydiv.style.margin = "20px 0";
+        //            mydiv.style.position = "static";
+        //        }
+        //    }
+        //}
+
+        //弹出登录窗
+        jQuery(document).ready(function ($) {
+            $('.theme-login').click(function () {
+                $('#spanLoginErr').html('');
+                $('.theme-popover-mask').fadeIn(100);
+                $('.theme-popover').slideDown(200);
+            })
+            $('.theme-poptit .close').click(function () {
+                $('.theme-popover-mask').fadeOut(100);
+                $('.theme-popover').slideUp(200);
+                //$('.theme-popover').unbind()
+            })
+
+        })
+        //加入收藏 
+        function AddFavorite(sURL, sTitle) {
+            sURL = encodeURI(sURL);
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+
+                    alert("您好,您的浏览器不支持，请使用Ctrl+D进行手动添加,或手动在浏览器里进行设置.");
+                }
+            }
+        }
+
+        //设为首页 
+        function SetHome(url) {
+
+            if (document.all) {
+                document.body.style.behavior = 'url(#default#homepage)';
+                document.body.setHomePage(url);
+
+            } else {
+                alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+            }
+
+        }
+    </script>
+
+
+    <!-- JiaThis Button BEGIN  分享到-->
+    <%--http://www.jiathis.com/--%>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?type=left" charset="utf-8"></script>
+    <%--<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0" charset="utf-8"></script>--%>
+    <!-- JiaThis Button END -->
+</body>
+
+</html>

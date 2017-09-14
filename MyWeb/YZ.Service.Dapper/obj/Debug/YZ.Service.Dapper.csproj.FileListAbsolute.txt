@@ -1,0 +1,5 @@
+D:\WebSite\MyWeb\YZ.Service.Dapper\bin\Debug\YZ.Service.Dapper.dll
+D:\WebSite\MyWeb\YZ.Service.Dapper\bin\Debug\YZ.Service.Dapper.pdb
+D:\WebSite\MyWeb\YZ.Service.Dapper\obj\Debug\YZ.Service.Dapper.dll
+D:\WebSite\MyWeb\YZ.Service.Dapper\obj\Debug\YZ.Service.Dapper.pdb
+D:\WebSite\MyWeb\YZ.Service.Dapper\obj\Debug\YZ.Service.Dapper.csprojResolveAssemblyReference.cache

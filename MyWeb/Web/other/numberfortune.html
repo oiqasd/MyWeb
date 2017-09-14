@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <link href="../css/bootstrap5152.css" rel="stylesheet" />
+    <title>号码运势测试</title>
+    <script>
+        function funClear() {
+
+            $('#num').val('');
+            $('#sExplain1').text('');
+            $('#sMark1').text('');
+            $('#sExplain2').text('');
+            $('#sMark2').text('');
+        }
+
+        function fun() {
+
+            number = $('#num').val().replace(/\s/g, "");
+            if (number == undefined || number == "") {
+                $('#sMark1').text('手机号码不能为空');
+                return;
+            }
+            if (number.length < 4) {
+                $('#sMark1').text('手机号码长度错误');
+                return;
+            }
+            $.post('/Form_Action/WebForm_Action.aspx?action=numberfortune',
+           { number: $('#num').val() }, function (data) {
+
+               data = eval("(" + data + ")");//解析json数据
+               $('#sExplain1').text(data[0].Value);
+               $('#sMark1').text(data[1].Value);
+               $('#sExplain2').text(data[2].Value);
+               $('#sMark2').text(data[3].Value);
+               $('#sExplain3').text(data[4].Value);
+               $('#sMark3').text(data[5].Value);
+           });
+        }
+    </script>
+
+    <style>
+        input, a {
+            margin: 10px !important;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top:20px"><a href="../index.aspx">首页</a>><a href="tools.html">工具列表</a>>&nbsp;号码凶吉测试</div>
+    <div style="border:1px solid #e3e3e3;margin:50px; text-align:center;">
+        <div style="background-color:#e3e3e3; font-size:22px; font-weight:600; line-height:44px;"><a>号码凶吉测试</a></div>
+        <p><a>输入手机号码：</a> <input type="text" id="num" /><input type="button" onclick="fun()" value="运势测试" /><input type="button" value="清除" onclick="funClear()" /></p>
+        <p><span id="sExplain1"></span>&nbsp;<span id="sMark1" style="color:red; font-size:large;font-weight:bold"></span></p>
+        <p><span id="sExplain3"></span>&nbsp;<span id="sMark3" style="color:red; font-size:large;font-weight:bold"></span></p>
+        <h4>号码与主人性格分析测算：</h4>
+        <p><h6 id="sExplain2" style="color:red; "></h6><span id="sMark2"></span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿
+.abc {
+    /*height: 300px;*/
+    /*border: 1px solid #000;*/
+    margin: auto;
+}
+
+@media screen and (min-width:1201px) {
+    .abc {width: 1200px;}
+}
+
+@media screen and (max-width:1200px) {
+    .abc {width: 900px;}
+}
+
+@media screen and (max-width: 900px) {
+    .abc {width: 500px;}
+}
+
+@media screen and (max-width: 500px) {
+    .abc {width: 100px;}
+}

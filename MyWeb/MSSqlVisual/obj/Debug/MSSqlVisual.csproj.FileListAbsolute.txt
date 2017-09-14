@@ -1,0 +1,6 @@
+D:\WebSite\MyWeb\MSSqlVisual\bin\MSSqlVisual.dll.config
+D:\WebSite\MyWeb\MSSqlVisual\bin\MSSqlVisual.dll
+D:\WebSite\MyWeb\MSSqlVisual\bin\MSSqlVisual.pdb
+D:\WebSite\MyWeb\MSSqlVisual\obj\Debug\MSSqlVisual.dll
+D:\WebSite\MyWeb\MSSqlVisual\obj\Debug\MSSqlVisual.pdb
+D:\WebSite\MyWeb\MSSqlVisual\obj\Debug\MSSqlVisual.csprojResolveAssemblyReference.cache

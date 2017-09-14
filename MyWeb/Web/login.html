@@ -1,0 +1,59 @@
+﻿<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户登录</title>
+    <link href="css/styleLogin.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+
+    <script src="js/LoginJs.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <section id="content">
+            <form action="/Form_Action/WebForm_Action.aspx?action=login" method="post">
+                <h1>用户登录</h1>
+                <div> 
+                    <input type="hidden" name="returnurl"/>
+                    <input type="text" placeholder="用户名" required="" name="username" id="username" />
+                </div>
+                <div>
+                    <input type="password" placeholder="密码" required="" name="password" id="password" />
+                </div>
+                <div class="">
+                    <span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>
+                </div>
+                <div>
+                    <!-- <input type="submit" value="Log in" /> -->
+                    <input type="submit" value="登录" class="btn btn-primary" id="js-btn-login" />
+                    <a href="#">忘记密码?</a><a href="reg.html">注册</a>
+                    <!-- <a href="#">Register</a> -->
+                </div>
+            </form><!-- form -->
+            <div class="button">
+                <span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>
+                <!--<a href="#">下载网盘</a>-->
+            </div> <!-- button -->
+        </section><!-- content -->
+    </div>
+    <!-- container -->
+
+
+    <br /><br /><br /><br />
+    <div style="text-align:center;">
+        <p style="display:none;">来源:<a>源码之家</a></p>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+        var url = window.location;
+        $("input[name='returnurl']").val(url.search.replace('?returnurl=', ''));
+        return;
+        //var index = url.toString().indexOf('returnurl=');
+        //if (index > 0) { 
+        //    $("input[name='returnurl']").val(url.search.replace('?returnurl=', ''));
+        //}
+    })
+</script>

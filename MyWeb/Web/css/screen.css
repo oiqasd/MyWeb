@@ -1,0 +1,25 @@
+﻿/******根据屏幕设置大小例子（暂无使用）***********/
+@media only screen and (max-width: 1440px)
+{
+	.centertxt {
+	width: 95%;
+	}
+	.name input[type=text], .email input[type=email] {
+	width: 70%;
+	}
+}
+@media only screen and (max-width: 1366px)
+{
+	.da-slider {
+	width: 100%;
+	height: 300px;
+	}
+	.centertxt {
+	width: 100%;
+	} 
+
+	.right-form > div > ul > li:nth-child(5) {
+	display: none;
+	}
+}
+ 

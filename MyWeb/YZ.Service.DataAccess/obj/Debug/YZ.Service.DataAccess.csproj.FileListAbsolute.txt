@@ -1,0 +1,11 @@
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\YZ.Service.DataAccess.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\YZ.Service.DataAccess.pdb
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\obj\Debug\YZ.Service.DataAccess.csprojResolveAssemblyReference.cache
+D:\WebSite\MyWeb\YZ.Service.DataAccess\obj\Debug\YZ.Service.DataAccess.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\obj\Debug\YZ.Service.DataAccess.pdb
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\YZ.Service.Common.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\Newtonsoft.Json.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\BouncyCastle.Crypto.dll
+D:\WebSite\MyWeb\YZ.Service.DataAccess\bin\Debug\YZ.Service.Common.pdb

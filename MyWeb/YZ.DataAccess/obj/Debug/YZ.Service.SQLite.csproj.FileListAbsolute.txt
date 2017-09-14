@@ -1,0 +1,7 @@
+D:\WebSite\MyWeb\YZ.DataAccess\bin\Debug\YZ.Service.SQLite.dll
+D:\WebSite\MyWeb\YZ.DataAccess\bin\Debug\YZ.Service.SQLite.pdb
+D:\WebSite\MyWeb\YZ.DataAccess\bin\Debug\SQLite.Designer.dll
+D:\WebSite\MyWeb\YZ.DataAccess\bin\Debug\System.Data.SQLite.dll
+D:\WebSite\MyWeb\YZ.DataAccess\obj\Debug\YZ.Service.SQLite.dll
+D:\WebSite\MyWeb\YZ.DataAccess\obj\Debug\YZ.Service.SQLite.pdb
+D:\WebSite\MyWeb\YZ.DataAccess\obj\Debug\YZ.Service.SQLite.csprojResolveAssemblyReference.cache

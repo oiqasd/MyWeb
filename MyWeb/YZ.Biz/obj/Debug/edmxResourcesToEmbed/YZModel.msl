@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YYZZModelStoreContainer" CdmEntityContainer="YYZZEntities">
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="YYZZModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="a_LikeCount" ColumnName="a_LikeCount" />
+          <ScalarProperty Name="a_Statistics" ColumnName="a_Statistics" />
+          <ScalarProperty Name="a_ModifiedDate" ColumnName="a_ModifiedDate" />
+          <ScalarProperty Name="a_ModifiedBy" ColumnName="a_ModifiedBy" />
+          <ScalarProperty Name="a_CreateDate" ColumnName="a_CreateDate" />
+          <ScalarProperty Name="a_CreateBy" ColumnName="a_CreateBy" />
+          <ScalarProperty Name="a_States" ColumnName="a_States" />
+          <ScalarProperty Name="a_IsHot" ColumnName="a_IsHot" />
+          <ScalarProperty Name="a_IsTop" ColumnName="a_IsTop" />
+          <ScalarProperty Name="a_Content" ColumnName="a_Content" />
+          <ScalarProperty Name="a_From" ColumnName="a_From" />
+          <ScalarProperty Name="a_KeyWord" ColumnName="a_KeyWord" />
+          <ScalarProperty Name="a_TypeId" ColumnName="a_TypeId" />
+          <ScalarProperty Name="a_Title" ColumnName="a_Title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticleTypes">
+      <EntityTypeMapping TypeName="YYZZModel.ArticleType">
+        <MappingFragment StoreEntitySet="ArticleType">
+          <ScalarProperty Name="a_t_CreateDate" ColumnName="a_t_CreateDate" />
+          <ScalarProperty Name="a_t_CreateBy" ColumnName="a_t_CreateBy" />
+          <ScalarProperty Name="a_t_Flag" ColumnName="a_t_Flag" />
+          <ScalarProperty Name="a_t_ArticleCategory" ColumnName="a_t_ArticleCategory" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Collections">
+      <EntityTypeMapping TypeName="YYZZModel.Collection">
+        <MappingFragment StoreEntitySet="Collection">
+          <ScalarProperty Name="Flg" ColumnName="Flg" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="A_id" ColumnName="A_id" />
+          <ScalarProperty Name="U_id" ColumnName="U_id" />
+          <ScalarProperty Name="C_id" ColumnName="C_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LikeCounts">
+      <EntityTypeMapping TypeName="YYZZModel.LikeCount">
+        <MappingFragment StoreEntitySet="LikeCount">
+          <ScalarProperty Name="stats" ColumnName="stats" />
+          <ScalarProperty Name="liketime" ColumnName="liketime" />
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="l_id" ColumnName="l_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="YYZZModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetail">
+          <ScalarProperty Name="UD_Remark" ColumnName="UD_Remark" />
+          <ScalarProperty Name="UD_Address" ColumnName="UD_Address" />
+          <ScalarProperty Name="UD_NowPlace" ColumnName="UD_NowPlace" />
+          <ScalarProperty Name="UD_HomeTown" ColumnName="UD_HomeTown" />
+          <ScalarProperty Name="UD_Worker" ColumnName="UD_Worker" />
+          <ScalarProperty Name="UD_Company" ColumnName="UD_Company" />
+          <ScalarProperty Name="UD_PaperNumber" ColumnName="UD_PaperNumber" />
+          <ScalarProperty Name="UD_PaperType" ColumnName="UD_PaperType" />
+          <ScalarProperty Name="UD_School" ColumnName="UD_School" />
+          <ScalarProperty Name="UD_Education" ColumnName="UD_Education" />
+          <ScalarProperty Name="UD_ContactWay" ColumnName="UD_ContactWay" />
+          <ScalarProperty Name="UD_EmotState" ColumnName="UD_EmotState" />
+          <ScalarProperty Name="UD_BooldType" ColumnName="UD_BooldType" />
+          <ScalarProperty Name="UD_Const" ColumnName="UD_Const" />
+          <ScalarProperty Name="UD_Cale" ColumnName="UD_Cale" />
+          <ScalarProperty Name="UD_Birth" ColumnName="UD_Birth" />
+          <ScalarProperty Name="UD_Age" ColumnName="UD_Age" />
+          <ScalarProperty Name="UD_Sex" ColumnName="UD_Sex" />
+          <ScalarProperty Name="U_Id" ColumnName="U_Id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfoes">
+      <EntityTypeMapping TypeName="YYZZModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="U_NickName" ColumnName="U_NickName" />
+          <ScalarProperty Name="U_RealName" ColumnName="U_RealName" />
+          <ScalarProperty Name="U_Signature" ColumnName="U_Signature" />
+          <ScalarProperty Name="U_Tag" ColumnName="U_Tag" />
+          <ScalarProperty Name="U_LastLoginTime" ColumnName="U_LastLoginTime" />
+          <ScalarProperty Name="U_RegisterDate" ColumnName="U_RegisterDate" />
+          <ScalarProperty Name="U_HeadPic" ColumnName="U_HeadPic" />
+          <ScalarProperty Name="U_Access" ColumnName="U_Access" />
+          <ScalarProperty Name="U_State" ColumnName="U_State" />
+          <ScalarProperty Name="U_MobilePhone" ColumnName="U_MobilePhone" />
+          <ScalarProperty Name="U_Salt" ColumnName="U_Salt" />
+          <ScalarProperty Name="U_Email" ColumnName="U_Email" />
+          <ScalarProperty Name="U_Password" ColumnName="U_Password" />
+          <ScalarProperty Name="U_UserName" ColumnName="U_UserName" />
+          <ScalarProperty Name="U_GUID" ColumnName="U_GUID" />
+          <ScalarProperty Name="U_Id" ColumnName="U_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="YYZZModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="os" ColumnName="os" />
+          <ScalarProperty Name="isp" ColumnName="isp" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="browserInfo" ColumnName="browserInfo" />
+          <ScalarProperty Name="cool" ColumnName="cool" />
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="isson" ColumnName="isson" />
+          <ScalarProperty Name="hasson" ColumnName="hasson" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="titleID" ColumnName="titleID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

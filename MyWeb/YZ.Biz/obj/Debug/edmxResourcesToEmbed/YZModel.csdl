@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YYZZModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="YYZZEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articles" EntityType="YYZZModel.Article" />
+    <EntitySet Name="ArticleTypes" EntityType="YYZZModel.ArticleType" />
+    <EntitySet Name="Collections" EntityType="YYZZModel.Collection" />
+    <EntitySet Name="LikeCounts" EntityType="YYZZModel.LikeCount" />
+    <EntitySet Name="UserDetails" EntityType="YYZZModel.UserDetail" />
+    <EntitySet Name="UserInfoes" EntityType="YYZZModel.UserInfo" />
+    <AssociationSet Name="FK_Articles_ArticleTypes" Association="YYZZModel.FK_Articles_ArticleTypes">
+      <End Role="ArticleType" EntitySet="ArticleTypes" />
+      <End Role="Article" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articles_UserInfo" Association="YYZZModel.FK_Articles_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfoes" />
+      <End Role="Article" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LikeCount_Articles" Association="YYZZModel.FK_LikeCount_Articles">
+      <End Role="Article" EntitySet="Articles" />
+      <End Role="LikeCount" EntitySet="LikeCounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LikeCount_UserInfo" Association="YYZZModel.FK_LikeCount_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfoes" />
+      <End Role="LikeCount" EntitySet="LikeCounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserDetail_UserDetail" Association="YYZZModel.FK_UserDetail_UserDetail">
+      <End Role="UserInfo" EntitySet="UserInfoes" />
+      <End Role="UserDetail" EntitySet="UserDetails" />
+    </AssociationSet>
+    <EntitySet Name="Comments" EntityType="YYZZModel.Comment" />
+  </EntityContainer>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a_Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="a_TypeId" Type="Int32" Nullable="false" />
+    <Property Name="a_KeyWord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="a_From" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="a_Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="a_IsTop" Type="Boolean" />
+    <Property Name="a_IsHot" Type="Boolean" />
+    <Property Name="a_States" Type="Byte" />
+    <Property Name="a_CreateBy" Type="Int64" Nullable="false" />
+    <Property Name="a_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="a_ModifiedBy" Type="Int64" />
+    <Property Name="a_ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="a_Statistics" Type="Int32" />
+    <Property Name="a_LikeCount" Type="Int32" />
+    <NavigationProperty Name="ArticleType" Relationship="YYZZModel.FK_Articles_ArticleTypes" FromRole="Article" ToRole="ArticleType" />
+    <NavigationProperty Name="UserInfo" Relationship="YYZZModel.FK_Articles_UserInfo" FromRole="Article" ToRole="UserInfo" />
+    <NavigationProperty Name="LikeCounts" Relationship="YYZZModel.FK_LikeCount_Articles" FromRole="Article" ToRole="LikeCount" />
+  </EntityType>
+  <EntityType Name="ArticleType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a_t_ArticleCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="a_t_Flag" Type="Byte" Nullable="false" />
+    <Property Name="a_t_CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="a_t_CreateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Articles" Relationship="YYZZModel.FK_Articles_ArticleTypes" FromRole="ArticleType" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Collection">
+    <Key>
+      <PropertyRef Name="C_id" />
+      <PropertyRef Name="U_id" />
+      <PropertyRef Name="A_id" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="Flg" />
+    </Key>
+    <Property Name="C_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="U_id" Type="Int32" Nullable="false" />
+    <Property Name="A_id" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Flg" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LikeCount">
+    <Key>
+      <PropertyRef Name="l_id" />
+    </Key>
+    <Property Name="l_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a_id" Type="Int64" Nullable="false" />
+    <Property Name="u_id" Type="Int64" Nullable="false" />
+    <Property Name="liketime" Type="DateTime" Precision="3" />
+    <Property Name="stats" Type="Byte" />
+    <NavigationProperty Name="Article" Relationship="YYZZModel.FK_LikeCount_Articles" FromRole="LikeCount" ToRole="Article" />
+    <NavigationProperty Name="UserInfo" Relationship="YYZZModel.FK_LikeCount_UserInfo" FromRole="LikeCount" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="U_Id" Type="Int64" Nullable="false" />
+    <Property Name="UD_Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Age" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Birth" Type="DateTime" Precision="0" />
+    <Property Name="UD_Cale" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Const" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UD_BooldType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UD_EmotState" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UD_ContactWay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_School" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_PaperType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_PaperNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Worker" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_HomeTown" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UD_NowPlace" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UD_Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserInfo" Relationship="YYZZModel.FK_UserDetail_UserDetail" FromRole="UserDetail" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="U_Id" />
+    </Key>
+    <Property Name="U_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="U_GUID" Type="Guid" Nullable="false" />
+    <Property Name="U_UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="U_Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="U_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="U_Salt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="U_MobilePhone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="U_State" Type="Byte" Nullable="false" />
+    <Property Name="U_Access" Type="Byte" Nullable="false" />
+    <Property Name="U_HeadPic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="U_RegisterDate" Type="DateTime" Precision="3" />
+    <Property Name="U_LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="U_Tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="U_Signature" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="U_RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="U_NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Articles" Relationship="YYZZModel.FK_Articles_UserInfo" FromRole="UserInfo" ToRole="Article" />
+    <NavigationProperty Name="LikeCounts" Relationship="YYZZModel.FK_LikeCount_UserInfo" FromRole="UserInfo" ToRole="LikeCount" />
+    <NavigationProperty Name="UserDetails" Relationship="YYZZModel.FK_UserDetail_UserDetail" FromRole="UserInfo" ToRole="UserDetail" />
+  </EntityType>
+  <Association Name="FK_Articles_ArticleTypes">
+    <End Type="YYZZModel.ArticleType" Role="ArticleType" Multiplicity="1" />
+    <End Type="YYZZModel.Article" Role="Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArticleType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="a_TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articles_UserInfo">
+    <End Type="YYZZModel.UserInfo" Role="UserInfo" Multiplicity="1" />
+    <End Type="YYZZModel.Article" Role="Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="U_Id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="a_CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LikeCount_Articles">
+    <End Type="YYZZModel.Article" Role="Article" Multiplicity="1" />
+    <End Type="YYZZModel.LikeCount" Role="LikeCount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LikeCount">
+        <PropertyRef Name="a_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LikeCount_UserInfo">
+    <End Type="YYZZModel.UserInfo" Role="UserInfo" Multiplicity="1" />
+    <End Type="YYZZModel.LikeCount" Role="LikeCount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="U_Id" />
+      </Principal>
+      <Dependent Role="LikeCount">
+        <PropertyRef Name="u_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserDetail_UserDetail">
+    <End Type="YYZZModel.UserInfo" Role="UserInfo" Multiplicity="1" />
+    <End Type="YYZZModel.UserDetail" Role="UserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="U_Id" />
+      </Principal>
+      <Dependent Role="UserDetail">
+        <PropertyRef Name="U_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titleID" Type="Int64" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="userId" Type="Int64" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="state" Type="Int32" />
+    <Property Name="hasson" Type="Boolean" />
+    <Property Name="isson" Type="Boolean" />
+    <Property Name="parentid" Type="Int64" />
+    <Property Name="cool" Type="Int32" />
+    <Property Name="browserInfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ipaddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="os" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

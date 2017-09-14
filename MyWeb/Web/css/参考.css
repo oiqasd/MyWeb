@@ -1,0 +1,45 @@
+﻿
+/*倒影效果 图片、文字*/
+/*start*/
+.reflection {
+    width: 421px;
+    height: 180px;
+    background: url(1.jpg) bottom center no-repeat;
+    -webkit-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    opacity: 0.5;
+    filter: alpha(opacity='50');
+}
+
+.overlay {
+    position: relative;
+    background-image: -moz-linear-gradient(center bottom, rgb(0,0,0) 20%, rgba(0,0,0,0) 90%);
+    background-image: -o-linear-gradient(rgba(0,0,0,0) 10%, rgb(0,0,0) 30%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.20, rgb(0,0,0)), color-stop(0.90, rgba(0,0,0,0)));
+}
+
+/*end*/
+
+
+/*字符溢出处理*/
+.text-over {
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis; /* for IE */
+    -o-text-overflow: ellipsis; /* for Opera */
+    -icab-text-overflow: ellipsis; /* for iCab */
+    -khtml-text-overflow: ellipsis; /* for Konqueror Safari */
+    -moz-text-overflow: ellipsis; /* for Firefox,mozilla */
+    -webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+}
+
+
+.aaaaa {  /*浏览器兼容*/
+    box-shadow: 0 14px 59px -7px rgba(0,0,0,0.85); /*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9*/
+    -moz-box-shadow: 0 14px 59px -7px rgba(0,0,0,0.85); /*Firefox4.0-*/
+    -webkit-box-shadow: 0 14px 59px -7px rgba(0,0,0,0.85); /*Safariand Google chrome10.0-*/
+}

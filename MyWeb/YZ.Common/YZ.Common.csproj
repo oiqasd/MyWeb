@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D9877D4-E6EA-4C20-9295-066A14DA892A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YZ.Common</RootNamespace>
+    <AssemblyName>YZ.Service.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\OutDLL\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OutDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspxToHtml.cs" />
+    <Compile Include="CacheHelper.cs" />
+    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="ConvertHelper.cs" />
+    <Compile Include="Cryptography\CrypAES.cs" />
+    <Compile Include="Cryptography\CrypDES.cs" />
+    <Compile Include="Cryptography\CrypMD5.cs" />
+    <Compile Include="Cryptography\CrypRSA.cs" />
+    <Compile Include="Cryptography\CryptHash.cs" />
+    <Compile Include="Cryptography\EncryProvider.cs" />
+    <Compile Include="Cryptography\RSAKey.cs" />
+    <Compile Include="Cryptography\SecurityHelper.cs" />
+    <Compile Include="Cryptography\SQLInjectSecurity.cs" />
+    <Compile Include="Cryptography\SymmetricMethod.cs" />
+    <Compile Include="EnumDisplayText.cs" />
+    <Compile Include="Enumerator.cs" />
+    <Compile Include="ExportFiles.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="HtmlHelper.cs" />
+    <Compile Include="Serialize\Base64Serializer.cs" />
+    <Compile Include="Serialize\BinSerializer.cs" />
+    <Compile Include="Serialize\ISerializer.cs" />
+    <Compile Include="Util\DateTimeHelper.cs" />
+    <Compile Include="Util\HttpHelper.cs" />
+    <Compile Include="Util\JsonHelper.cs" />
+    <Compile Include="PageLinqExtensions.cs" />
+    <Compile Include="PageList.cs" />
+    <Compile Include="PhoneLuck.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMail.cs" />
+    <Compile Include="Serialize\NameValueSerializer.cs" />
+    <Compile Include="Serialize\SerializeFactory.cs" />
+    <Compile Include="Serialize\SerializeMethod.cs" />
+    <Compile Include="Serialize\XMLSerializer.cs" />
+    <Compile Include="Util\StringHelper.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="ValidateHelper.cs" />
+    <Compile Include="Log\LogHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

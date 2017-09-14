@@ -1,0 +1,21 @@
+﻿[
+    {
+        Type: "SlideService",
+        ActionName: "GetList",
+        ActionDesc: "首页-轮播图",
+        NeedParams: [
+            [ "way", "1" ],
+            [ "count", "3" ]
+        ]
+    },
+     {
+        ControllerName: "Mobile",
+        ActionName: "SendSmsCode",
+        ActionDesc: "发送验证码",
+        NeedParams: [
+            [ "mobile", "" ],
+            [ "sendType", "1" ]
+        ]
+    }
+    
+]

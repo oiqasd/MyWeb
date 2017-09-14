@@ -1,0 +1,9 @@
+D:\WebSite\MyWeb\UnitTest\bin\Debug\UnitTest.dll
+D:\WebSite\MyWeb\UnitTest\bin\Debug\UnitTest.pdb
+D:\WebSite\MyWeb\UnitTest\bin\Debug\YZ.Service.Common.dll
+D:\WebSite\MyWeb\UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\WebSite\MyWeb\UnitTest\bin\Debug\BouncyCastle.Crypto.dll
+D:\WebSite\MyWeb\UnitTest\bin\Debug\YZ.Service.Common.pdb
+D:\WebSite\MyWeb\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\WebSite\MyWeb\UnitTest\obj\Debug\UnitTest.dll
+D:\WebSite\MyWeb\UnitTest\obj\Debug\UnitTest.pdb

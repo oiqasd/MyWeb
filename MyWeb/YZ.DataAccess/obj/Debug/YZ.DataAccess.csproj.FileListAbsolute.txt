@@ -1,0 +1,4 @@
+D:\WebSite\MyWeb\YZ.DataAccess\bin\Debug\YZ.DataAccess.dll
+D:\WebSite\MyWeb\YZ.DataAccess\bin\Debug\YZ.DataAccess.pdb
+D:\WebSite\MyWeb\YZ.DataAccess\obj\Debug\YZ.DataAccess.dll
+D:\WebSite\MyWeb\YZ.DataAccess\obj\Debug\YZ.DataAccess.pdb

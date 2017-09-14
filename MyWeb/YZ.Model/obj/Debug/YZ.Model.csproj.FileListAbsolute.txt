@@ -1,0 +1,4 @@
+D:\WebSite\MyWeb\YZ.Model\bin\Debug\YZ.Model.dll
+D:\WebSite\MyWeb\YZ.Model\bin\Debug\YZ.Model.pdb
+D:\WebSite\MyWeb\YZ.Model\obj\Debug\YZ.Model.dll
+D:\WebSite\MyWeb\YZ.Model\obj\Debug\YZ.Model.pdb

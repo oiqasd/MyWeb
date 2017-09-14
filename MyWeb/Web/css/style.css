@@ -1,0 +1,571 @@
+
+p {
+    /*margin-bottom: 2px;*/
+}
+
+body {
+    min-width: 900px;
+}
+/*禁止textarea拖动*/
+textarea {
+    resize: none;
+}
+
+.theme-login {
+    cursor: pointer;
+}
+
+.body {
+    width: 100%;
+    margin: 0 auto;
+    /*text-align: center;*/
+    display: inline-block;
+}
+
+.link {
+    color: blue;
+    cursor: pointer;
+}
+
+    .link:hover {
+        text-decoration: underline;
+        /*color:red;*/
+    }
+
+.body div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.m_content {
+    font-family: Arial;
+    font-size: 12px;
+    color: #873422;
+    /*margin-top: -20px;*/
+    text-indent: 2em;
+}
+
+/*.m_content p {
+        text-indent: 2em;
+    }*/
+
+.m_title {
+    font-size: 18px;
+}
+
+.title14 {
+    font-size: 14px;
+}
+
+.m_title a:hover {
+    text-decoration: underline;
+}
+
+.searchback {
+    padding-top: 1px;
+    height: 120px;
+    width: 100%;
+    background: #353b65 url("../images/main-bg.jpg") center top no-repeat;
+}
+/*字符溢出处理*/
+.text-over {
+    /*word-wrap: break-word;*/
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: break-word;
+    /*word-break: keep-all;*/
+    text-overflow: ellipsis; /* for IE */
+    -o-text-overflow: ellipsis; /* for Opera */
+    -icab-text-overflow: ellipsis; /* for iCab */
+    -khtml-text-overflow: ellipsis; /* for Konqueror Safari */
+    -moz-text-overflow: ellipsis; /* for Firefox,mozilla */
+    -webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+}
+
+/*超出部分文字隐藏 适用于div*/
+.HideFont {
+}
+    /*隐藏div下的图片*/
+    .HideFont img {
+        display: none;
+    }
+
+    .HideFont span img {
+        display: none;
+    }
+
+    .HideFont p img {
+        display: none;
+    }
+
+    .HideFont p span img {
+        display: none;
+    }
+/* AspNetPager Style Power By http://www.edweb.cn */
+.pager {
+    width: 500px;
+    /*margin: 10px;*/
+    line-height: 20px;
+    display: block;
+    height: 30px;
+    margin: 20px auto 6px auto;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+    .pager .custominfohtml {
+        white-space: nowrap;
+        height: 24px;
+    }
+
+    .pager span {
+        border: 1px solid #CCCCCC;
+        margin: 0 5px;
+        padding: 1px 6px;
+        float: left;
+    }
+
+    .pager a {
+        border: 1px solid #CCCCCC;
+        display: block;
+        overflow: hidden;
+        float: left;
+        margin: 0 5px;
+        padding: 1px 6px;
+    }
+
+        .pager a:hover {
+            border: 1px solid red;
+            background-color: #993399;
+            color: #ffffff;
+            margin: 0 5px;
+            padding: 1px 6px;
+        }
+
+.box_shadow {
+    box-shadow: 0px 4px 8px #888;
+}
+
+/*--------------------width------------------------*/
+.width_35per {
+    width: 35%;
+}
+
+.width_40per {
+    width: 40%;
+}
+
+.width_50per {
+    width: 50%;
+}
+
+.width_60per {
+    width: 60%;
+}
+
+.width_70per {
+    width: 70%;
+}
+
+.width_80per {
+    width: 80%;
+}
+
+.width_90per {
+    width: 80%;
+}
+
+.width_100per {
+    width: 100%;
+}
+
+.width_50 {
+    width: 50px;
+}
+
+.width_80 {
+    width: 80px;
+}
+
+.width_100 {
+    width: 100px;
+}
+
+.width_200 {
+    width: 200px;
+}
+
+.width_230 {
+    width: 230px;
+}
+
+.width_260 {
+    width: 260px;
+}
+
+.width_300 {
+    width: 300px;
+}
+
+.width_500 {
+    width: 500px;
+}
+
+.width_600 {
+    width: 600px;
+}
+
+.width_620 {
+    width: 620px;
+}
+
+.width_650 {
+    width: 650px;
+}
+
+.width_675 {
+    width: 675px;
+}
+
+.width_700 {
+    width: 700px;
+}
+
+.width_725 {
+    width: 725px;
+}
+
+.width_800 {
+    width: 800px;
+}
+
+.width_980 {
+    width: 980px;
+}
+/*-------------------Height-------------*/
+.Height_20 {
+    height: 40px;
+}
+
+.Height_60 {
+    height: 60px;
+}
+
+.Height_100 {
+    height: 100px;
+}
+
+.max_hei_100px {
+    max-height: 100px;
+}
+
+.Height_200 {
+    height: 200px;
+}
+/*-------------------字体对齐-------------*/
+.Text_Center {
+    text-align: center;
+}
+
+.Text_Left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.border_bottom_dot {
+    border-bottom: 1px dotted #E7E2DC;
+}
+
+.Detail_Title {
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #369;
+    padding-bottom: 14px;
+    /* background-size:cover;
+    border-bottom: 1px solid #999;   
+    background: url(../images/underline.jpg) repeat-x bottom;*/
+}
+
+.mid {
+    margin: 0 auto;
+}
+
+.Detail_Content {
+    color: #000000;
+    text-align: left;
+    text-indent: 2em;
+    /*font-family: Arial;
+    font-size: 15pt;
+    font-family: KaiTi;
+    color: rgb(15, 14, 18); 
+    letter-spacing: 2px;
+    line-height: 30px;*/
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+/*标题导航栏*/
+.titlenav {
+    margin: 7px 0 -10px 10px;
+}
+
+.margin_top_20 {
+    margin-top: 20px;
+}
+
+.margin_top_10 {
+    margin-top: 80px;
+}
+
+.margin_right_20 {
+    margin-right: 20px;
+}
+
+.margin_left_20 {
+    margin-left: 20px;
+}
+
+.margin_left_6 {
+    margin-left: 6px;
+}
+
+.margin_top_15 {
+    margin-top: 15px;
+}
+
+.margin_left_15 {
+    margin-left: 15px;
+}
+
+.pad-left20 {
+    padding-left: 20px;
+}
+
+.padding-top20 {
+    padding-top: 20px;
+}
+
+.color-a8 {
+    color: #a8a8a8;
+}
+
+.wb_face {
+    width: 50px;
+}
+
+.wb_face_radius {
+    border-radius: 50%;
+}
+
+.border_radius_6 {
+    border-radius: 6px 6px;
+}
+
+.wb_detail {
+    margin-left: 60px;
+}
+
+.a_title {
+    border-bottom: 2px solid #f3f3f3;
+}
+/*index*/
+.article-entry .index-like {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    line-height: 18px;
+    font-weight: 600;
+    padding: 3px 5px 3px 20px;
+    border: 1px solid #f2f2f2;
+    border-bottom: none;
+    background: url("../images/like.png") no-repeat 6px -22px;
+    color: #395996;
+    cursor: pointer;
+}
+
+#divLeft, #divRight, #divCenter {
+    float: left;
+    margin-left: 15px;
+}
+
+/* Sidebar */
+
+#sidebar {
+    float: right;
+    width: 230px;
+    margin: 0px;
+    /*padding: 0px 15px 0px 0px;*/
+    color: #787878;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    /*white-space:nowrap;
+    overflow:hidden;*/
+}
+
+    #sidebar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #sidebar li {
+        margin: 0;
+        padding: 0;
+    }
+
+        #sidebar li ul {
+            margin: 0px 0px;
+            padding-bottom: 30px;
+        }
+
+        #sidebar li li {
+            line-height: 35px;
+            border-bottom: 1px dotted #E7E2DC;
+            margin: 0px 30px;
+            border-left: none;
+        }
+
+            #sidebar li li span {
+                display: block;
+                margin-top: -20px;
+                padding: 0;
+                font-size: 11px;
+                font-style: italic;
+            }
+
+    #sidebar h2 {
+        height: 38px;
+        padding-left: 30px;
+        letter-spacing: -.5px;
+        font-size: 1.8em;
+    }
+
+    #sidebar p {
+        margin: 0 0px;
+        padding: 0px 30px 20px 30px;
+        text-align: justify;
+    }
+
+    #sidebar a {
+        border: none;
+        color: #A19D9A;
+    }
+
+        #sidebar a:hover {
+            text-decoration: underline;
+            color: #8A8A8A;
+        }
+
+.UcnMore {
+    text-align: right;
+}
+/*chihuo.aspx*/
+#da-thumbs a {
+    width: 220px;
+    height: 170px;
+    float: left;
+    margin: 15px 0 0 15px;
+    border: 1px solid #c3c3c3;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    /*border-radius: 3px;
+    -moz-box-radius: 3px;*/
+}
+
+    #da-thumbs a h1 {
+        height: 170px;
+        vertical-align: middle;
+        display: table-cell;
+        font-size: 26px;
+        /*padding: 0 13px;*/
+        margin: 0 auto;
+        width: 220px;
+        text-align: center;
+        font-family: KaiTi;
+    }
+
+    #da-thumbs a div {
+        height: 150px;
+        width: 210px;
+        vertical-align: middle;
+        display: table-cell;
+        position: absolute;
+        background-color: #000;
+        opacity: .6;
+        color: white;
+        overflow: hidden;
+        filter: alpha(opacity=80);
+        padding: 10px 5px;
+    }
+
+    #da-thumbs a :hover {
+        border-color: #999;
+    }
+
+    #da-thumbs a div.da-animate {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+#da-thumbs a {
+    text-decoration: none;
+    blr: expression(this.onFocus=this.blur());
+}
+/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+:focus {
+    outline: 0;
+}
+/* Initial state classes:*/
+.da-slideFromTop {
+    left: 0px;
+    top: -100%;
+}
+
+.da-slideFromBottom {
+    left: 0px;
+    top: 100%;
+}
+
+.da-slideFromLeft {
+    top: 0px;
+    left: -100%;
+}
+
+.da-slideFromRight {
+    top: 0px;
+    left: 100%;
+}
+/* Final state classes:*/
+.da-slideTop {
+    top: 0px;
+}
+
+.da-slideLeft {
+    left: 0px;
+}

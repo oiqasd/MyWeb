@@ -1,0 +1,148 @@
+.cbp-fwslider {
+  position: relative;
+  overflow: hidden;
+  padding:11em 0 0em;
+}
+.cbp-fwslider ul {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	list-style-type: none;
+}
+
+.cbp-fwslider ul li {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	transform: translateZ(0);
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.cbp-fwslider ul li > a,
+.cbp-fwslider ul li > div {
+	display: block;
+	text-align: center;
+	outline: none;
+}
+
+.cbp-fwslider ul li > a img {
+	border: none;
+	display: block;
+	margin: 0 auto;
+	  max-width: 32%;
+}
+
+.cbp-fwslider nav span {
+	position: absolute;
+	top: 57%;
+	  height: 70px;
+	  width: 40px;
+	 background: transparent url("../images/arrows.png") no-repeat 0px 0px;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	margin-top: -50px;
+	line-height: 100px;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.cbp-fwslider nav span.cbp-fwnext {
+	background-position: right top;
+	right:0;
+}
+
+.cbp-fwslider nav span.cbp-fwprev {
+	background-position:left top;
+	left:0px;
+}
+span.cbp-fwprev {
+  display: none important!;
+}
+span.cbp-fwnext {
+display: none important!;
+}
+.cbp-fwdots {
+	position: absolute;
+	bottom:30px;
+	white-space: nowrap;
+	text-align: center;
+	width: 100%;
+	 display: none;
+
+}
+
+.cbp-fwdots span {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background:rgba(39, 40, 40, 0.74);
+	margin: 4px;
+	border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-msborder-radius: 50%;
+	cursor: pointer;
+	
+}
+
+.cbp-fwdots span:hover {
+	background:rgba(39, 40, 40, 0.74);
+}
+
+.cbp-fwdots span.cbp-fwcurrent {
+	background:#ff1791;
+	box-shadow: 0 0 0 2px #ff1791;
+	-webkit-transition: box-shadow 0.2s ease-in-out;
+	-moz-transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
+}
+/*-----responsive-------------*/
+@media screen and (max-width:1024px) {
+	.cbp-fwslider nav span {
+	  position: absolute;
+	  top: 63%;
+	  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width:640px) {
+		.cbp-fwslider nav span {
+	  position: absolute;
+	  top: 64%;
+	}
+	.cbp-fwslider {
+	  position: relative;
+	  margin: 0 0 0px;
+	  overflow: hidden;
+	  padding: 6em 0 0em;
+	}
+}
+@media screen and (max-width:480px) {
+	.cbp-fwslider nav span {
+	  position: absolute;
+	  top: 69%;
+	}
+	.cbp-fwslider {
+	  position: relative;
+	  margin: 0 0 0px;
+	  overflow: hidden;
+	  padding: 5em 0 0em;
+	}
+}
+@media screen and (max-width:320px) {
+	.cbp-fwslider nav span {
+	  top: 71%;
+	}
+	.cbp-fwslider ul li > a img {
+	   border: none;
+	  display: block;
+	  margin: 6% auto 0;
+	  max-width: 34%;
+	}
+	.cbp-fwslider {
+	  padding: 3em 0 0em;
+	}
+}

@@ -1,0 +1,5 @@
+D:\WebSite\MyWeb\YZ.Business\bin\Debug\YZ.Service.Business.dll
+D:\WebSite\MyWeb\YZ.Business\bin\Debug\YZ.Service.Business.pdb
+D:\WebSite\MyWeb\YZ.Business\obj\Debug\YZ.Service.Business.dll
+D:\WebSite\MyWeb\YZ.Business\obj\Debug\YZ.Service.Business.pdb
+D:\WebSite\MyWeb\YZ.Business\obj\Debug\YZ.Service.Business.csprojResolveAssemblyReference.cache

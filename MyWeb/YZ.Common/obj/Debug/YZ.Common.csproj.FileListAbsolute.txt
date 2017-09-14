@@ -1,0 +1,17 @@
+F:\ProgramWork\MyWeb\YZ.Common\bin\Debug\YZ.Common.dll
+F:\ProgramWork\MyWeb\YZ.Common\bin\Debug\YZ.Common.pdb
+F:\ProgramWork\MyWeb\YZ.Common\obj\Debug\YZ.Common.dll
+F:\ProgramWork\MyWeb\YZ.Common\obj\Debug\YZ.Common.pdb
+F:\ProgramWork\MyWeb\YZ.Common\obj\Debug\YZ.Common.csprojResolveAssemblyReference.cache
+D:\MyWeb\YZ.Common\bin\Debug\YZ.Common.dll
+D:\MyWeb\YZ.Common\bin\Debug\YZ.Common.pdb
+D:\MyWeb\YZ.Common\obj\Debug\YZ.Common.csprojResolveAssemblyReference.cache
+D:\MyWeb\YZ.Common\obj\Debug\YZ.Common.dll
+D:\MyWeb\YZ.Common\obj\Debug\YZ.Common.pdb
+D:\WebSite\MyWeb\YZ.Common\bin\Debug\YZ.Service.Common.dll
+D:\WebSite\MyWeb\YZ.Common\bin\Debug\YZ.Service.Common.pdb
+D:\WebSite\MyWeb\YZ.Common\bin\Debug\BouncyCastle.Crypto.dll
+D:\WebSite\MyWeb\YZ.Common\bin\Debug\Newtonsoft.Json.dll
+D:\WebSite\MyWeb\YZ.Common\obj\Debug\YZ.Service.Common.dll
+D:\WebSite\MyWeb\YZ.Common\obj\Debug\YZ.Service.Common.pdb
+D:\WebSite\MyWeb\YZ.Common\obj\Debug\YZ.Common.csprojResolveAssemblyReference.cache

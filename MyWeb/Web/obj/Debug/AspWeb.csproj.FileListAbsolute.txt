@@ -1,0 +1,17 @@
+D:\WebSite\MyWeb\Web\obj\Debug\AspWeb.csprojResolveAssemblyReference.cache
+D:\WebSite\MyWeb\Web\bin\AspWeb.dll.config
+D:\WebSite\MyWeb\Web\bin\AspWeb.dll
+D:\WebSite\MyWeb\Web\bin\AspWeb.pdb
+D:\WebSite\MyWeb\Web\bin\AspNetPager.dll
+D:\WebSite\MyWeb\Web\bin\BCrypt.Net.dll
+D:\WebSite\MyWeb\Web\bin\YZ.Biz.dll
+D:\WebSite\MyWeb\Web\bin\YZ.Service.Common.dll
+D:\WebSite\MyWeb\Web\bin\EntityFramework.dll
+D:\WebSite\MyWeb\Web\bin\Newtonsoft.Json.dll
+D:\WebSite\MyWeb\Web\bin\BouncyCastle.Crypto.dll
+D:\WebSite\MyWeb\Web\bin\YZ.Biz.pdb
+D:\WebSite\MyWeb\Web\bin\YZ.Service.Common.pdb
+D:\WebSite\MyWeb\Web\bin\EntityFramework.xml
+D:\WebSite\MyWeb\Web\bin\zh-Hans\EntityFramework.resources.dll
+D:\WebSite\MyWeb\Web\obj\Debug\AspWeb.dll
+D:\WebSite\MyWeb\Web\obj\Debug\AspWeb.pdb

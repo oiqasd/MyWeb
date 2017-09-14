@@ -1,0 +1,12 @@
+D:\MyWeb\TestWeb\bin\TestWeb.dll.config
+D:\MyWeb\TestWeb\bin\TestWeb.dll
+D:\MyWeb\TestWeb\bin\TestWeb.pdb
+D:\MyWeb\TestWeb\obj\Debug\TestWeb.csprojResolveAssemblyReference.cache
+D:\MyWeb\TestWeb\obj\Debug\TestWeb.dll
+D:\MyWeb\TestWeb\obj\Debug\TestWeb.pdb
+D:\WebSite\MyWeb\TestWeb\bin\TestWeb.dll.config
+D:\WebSite\MyWeb\TestWeb\bin\TestWeb.dll
+D:\WebSite\MyWeb\TestWeb\bin\TestWeb.pdb
+D:\WebSite\MyWeb\TestWeb\obj\Debug\TestWeb.dll
+D:\WebSite\MyWeb\TestWeb\obj\Debug\TestWeb.pdb
+D:\WebSite\MyWeb\TestWeb\obj\Debug\TestWeb.csprojResolveAssemblyReference.cache

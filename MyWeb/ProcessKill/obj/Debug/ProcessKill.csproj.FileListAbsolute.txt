@@ -1,0 +1,8 @@
+D:\WebSite\MyWeb\ProcessKill\bin\Debug\ProcessKill.exe.config
+D:\WebSite\MyWeb\ProcessKill\bin\Debug\ProcessKill.exe
+D:\WebSite\MyWeb\ProcessKill\bin\Debug\ProcessKill.pdb
+D:\WebSite\MyWeb\ProcessKill\obj\Debug\ProcessKill.frmProcessKill.resources
+D:\WebSite\MyWeb\ProcessKill\obj\Debug\ProcessKill.Properties.Resources.resources
+D:\WebSite\MyWeb\ProcessKill\obj\Debug\ProcessKill.csproj.GenerateResource.Cache
+D:\WebSite\MyWeb\ProcessKill\obj\Debug\ProcessKill.exe
+D:\WebSite\MyWeb\ProcessKill\obj\Debug\ProcessKill.pdb
